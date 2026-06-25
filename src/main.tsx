@@ -8,7 +8,7 @@ import './app/globals.css'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio_pradeep">
         <App />
       </BrowserRouter>
     </HelmetProvider>
