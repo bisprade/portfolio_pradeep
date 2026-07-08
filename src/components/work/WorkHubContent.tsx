@@ -8,6 +8,22 @@ const filters = ['All Projects', 'UX Design', 'Platform Design', 'Research']
 
 const projects = [
   {
+    id: 'comms-academy',
+    title: 'Comms Academy — Communications Hub Redesign',
+    description: 'Transformed an internal Amazon communications hub from a promotional billboard into a focused, intelligent resource. Surfaced 4 AI tools, added filtering, and restructured the entire information architecture.',
+    tags: ['UX Design', 'Platform Design', 'Research'],
+    image: '/images/projects/Comms_Academy_New.png',
+    year: '2026',
+    role: 'UX Designer',
+    impact: '5 core UX problems solved',
+    metrics: [
+      { label: 'AI Tools Surfaced', value: '4' },
+      { label: 'UX Issues Fixed', value: '5' },
+      { label: 'Filter Categories', value: '4' },
+    ],
+    caseStudyLink: '/work/comms-academy',
+  },
+  {
     id: 'virtual-onboarding',
     title: 'On-Demand Virtual Onboarding Platform',
     description: 'Replaced a costly third-party platform (VFairs) with a custom-built internal onboarding experience for CS leaders, achieving 90% task completion and 30% conversion lift.',

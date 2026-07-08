@@ -5,6 +5,7 @@ import HomePage from '@/pages/HomePage'
 import AboutPage from '@/pages/AboutPage'
 import WorkPage from '@/pages/WorkPage'
 import ContactPage from '@/pages/ContactPage'
+import CommsAcademyCaseStudy from '@/pages/CommsAcademyCaseStudy'
 function App() {
   return (
     <div className="min-h-screen bg-background font-sans antialiased">
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/work" element={<WorkPage />} />
+            <Route path="/work/comms-academy" element={<CommsAcademyCaseStudy />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
