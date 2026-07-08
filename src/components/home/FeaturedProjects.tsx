@@ -75,7 +75,7 @@ export function FeaturedProjects() {
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 gradient-border pointer-events-none" />
 
                 {/* Project Thumbnail */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/80 to-[hsl(330,80%,60%)]/80 flex items-center justify-center p-8">
+                <div className="relative aspect-[4/3] overflow-hidden flex items-center justify-center p-8" style={{ background: 'linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(330, 80%, 60%) 100%)' }}>
                   <p className="text-white text-lg md:text-xl font-bold text-center leading-tight drop-shadow-sm">
                     {project.title.split('—')[0].trim()}
                   </p>
