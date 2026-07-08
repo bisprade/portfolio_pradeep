@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowLeft, Check, Users, TrendingUp, Search, Compass, Download, Frown } from 'lucide-react'
-
-const BASE = '/portfolio_pradeep'
+import { ArrowLeft, Check, Frown } from 'lucide-react'
 
 const meta = [
   { label: 'Role', value: 'Lead UX Designer' },
