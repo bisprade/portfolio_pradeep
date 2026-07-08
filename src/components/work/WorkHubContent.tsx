@@ -21,7 +21,6 @@ const projects = [
       { label: 'UX Issues Fixed', value: '5' },
       { label: 'Filter Categories', value: '4' },
     ],
-    caseStudyLink: '/work/comms-academy',
   },
   {
     id: 'virtual-onboarding',
@@ -146,17 +145,12 @@ export function WorkHubContent() {
                 className="group"
               >
                 <article className="bg-card rounded-lg border shadow-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-full flex flex-col">
-                  {/* Project Image */}
-                  <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-
-                    {/* Year Badge */}
-                    <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-medium">
+                  {/* Project Thumbnail */}
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/80 to-[hsl(330,80%,60%)]/80 flex items-center justify-center p-8">
+                    <p className="text-white text-lg md:text-xl font-bold text-center leading-tight drop-shadow-sm">
+                      {project.title.split('—')[0].trim()}
+                    </p>
+                    <div className="absolute top-4 left-4 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-bold text-white">
                       {project.year}
                     </div>
                   </div>
@@ -198,24 +192,14 @@ export function WorkHubContent() {
                       </div>
 
                       {/* Case Study CTA */}
-                      {project.caseStudyLink ? (
-                        <Link
-                          to={project.caseStudyLink}
-                          className="flex items-center justify-center gap-2 w-full rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-                        >
-                          <span>View Case Study</span>
-                          <ArrowRight className="h-3.5 w-3.5" />
-                        </Link>
-                      ) : (
-                        <Link
-                          to="/contact"
-                          className="flex items-center justify-center gap-2 w-full rounded-md bg-primary/10 border border-primary/20 px-4 py-2.5 text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
-                        >
-                          <Lock className="h-3.5 w-3.5" />
-                          <span>Request Full Case Study</span>
-                          <ArrowRight className="h-3.5 w-3.5" />
-                        </Link>
-                      )}
+                      <Link
+                        to="/contact"
+                        className="flex items-center justify-center gap-2 w-full rounded-md bg-primary/10 border border-primary/20 px-4 py-2.5 text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                      >
+                        <Lock className="h-3.5 w-3.5" />
+                        <span>Request Full Case Study</span>
+                        <ArrowRight className="h-3.5 w-3.5" />
+                      </Link>
                     </div>
                   </div>
                 </article>

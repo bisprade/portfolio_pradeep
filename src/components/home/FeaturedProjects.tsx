@@ -74,17 +74,12 @@ export function FeaturedProjects() {
                 {/* Gradient border on hover */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 gradient-border pointer-events-none" />
 
-                {/* Project Image */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-
-                  {/* Metric badge */}
-                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/90 text-primary-foreground text-xs font-bold backdrop-blur-sm">
+                {/* Project Thumbnail */}
+                <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/80 to-[hsl(330,80%,60%)]/80 flex items-center justify-center p-8">
+                  <p className="text-white text-lg md:text-xl font-bold text-center leading-tight drop-shadow-sm">
+                    {project.title.split('—')[0].trim()}
+                  </p>
+                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold backdrop-blur-sm">
                     {project.metric}
                   </div>
                 </div>
