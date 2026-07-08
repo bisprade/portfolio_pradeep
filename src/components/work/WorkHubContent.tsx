@@ -197,15 +197,25 @@ export function WorkHubContent() {
                         <span>{project.role}</span>
                       </div>
 
-                      {/* Request Case Study CTA */}
-                      <Link
-                        to="/contact"
-                        className="flex items-center justify-center gap-2 w-full rounded-md bg-primary/10 border border-primary/20 px-4 py-2.5 text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
-                      >
-                        <Lock className="h-3.5 w-3.5" />
-                        <span>Request Full Case Study</span>
-                        <ArrowRight className="h-3.5 w-3.5" />
-                      </Link>
+                      {/* Case Study CTA */}
+                      {project.caseStudyLink ? (
+                        <Link
+                          to={project.caseStudyLink}
+                          className="flex items-center justify-center gap-2 w-full rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+                        >
+                          <span>View Case Study</span>
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                      ) : (
+                        <Link
+                          to="/contact"
+                          className="flex items-center justify-center gap-2 w-full rounded-md bg-primary/10 border border-primary/20 px-4 py-2.5 text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                        >
+                          <Lock className="h-3.5 w-3.5" />
+                          <span>Request Full Case Study</span>
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </article>
